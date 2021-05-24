@@ -1,0 +1,21 @@
+PODS:
+  - Kvalifika (0.0.1)
+
+DEPENDENCIES:
+  - Kvalifika (from `https://github.com/Kvalifika/kvalifika-swift-sdk.git`)
+
+EXTERNAL SOURCES:
+  Kvalifika:
+    :git: https://github.com/Kvalifika/kvalifika-swift-sdk.git
+
+CHECKOUT OPTIONS:
+  Kvalifika:
+    :commit: 269a3bf2a60de192089183dc41b74ed849849424
+    :git: https://github.com/Kvalifika/kvalifika-swift-sdk.git
+
+SPEC CHECKSUMS:
+  Kvalifika: 465c8f8eb747c090d66fa4bcbf2d3d8129eb58c8
+
+PODFILE CHECKSUM: 4e80fef991a2e62d13ba5cf0b3b1d04075791ae5
+
+COCOAPODS: 1.10.1
