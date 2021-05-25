@@ -21,7 +21,7 @@ Table of content:
 Add following to project's main `Podfile` file
 
 ```groovy
-pod 'Kvalifika', '~> 0.0.1'
+pod 'Kvalifika', :git => "https://github.com/Kvalifika/kvalifika-swift-sdk.git"
 ```
 
 &nbsp;
