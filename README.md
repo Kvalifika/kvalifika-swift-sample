@@ -5,16 +5,16 @@ Use Kvalifika SDK to easily integrate into your Android app
 Table of content:
 
 - [Installation](#installation)
-- [UI Customizations](#ui-customizations)
-  - [Appearance](#appearance)
-  - [Language](#language)
 - [Initialize the SDK](#initialize-the-sdk)
+- [App Permissions](#app-permissions)
 - [Start Verification](#start-verification)
 - [Handling Verifications](#handling-verifications)
   - [Callback Methods](#callback-methods)
   - [Error Codes](#error-codes)
-
-&nbsp;
+- [UI Customizations](#ui-customizations)
+  - [Appearance](#appearance)
+  - [Language](#language)
+    &nbsp;
 
 ## Installation
 
@@ -22,39 +22,6 @@ Add following to project's main `Podfile` file
 
 ```groovy
 pod 'Kvalifika', :git => "https://github.com/Kvalifika/kvalifika-swift-sdk.git"
-```
-
-&nbsp;
-
-## UI Customizations
-
-### Appearance
-
-You can customize logo and icons.
-Provide resources.
-
-```Swift
-Kvalifika.initializeSDK(
-        AppLogoImageName: "AppLogo",
-        DocLogoImageName: "DocLogo",
-        CancelImageName: "cancel"
-    )
-```
-
-&nbsp;
-
-### Language
-
-You can set locale when initializing SDK
-Supported locales are:
-
-| Code | Language |
-| ---- | -------- |
-| EN   | English  |
-| GE   | Georgian |
-
-```swift
-sdk = Kvalifika.initializeSDK(LanguageLocale:  Kvalifika.LanguageLocaleTypeEnum.GE.rawValue)
 ```
 
 &nbsp;
@@ -102,6 +69,24 @@ class ViewController: UIViewController {
         print(error)
     }
 }
+```
+
+&nbsp;
+
+## App Permissions
+
+Please add the following permissions to your app's `Info.plist`,
+so that the Kvalifika iOS SDK can access a user's camera to run a verification.
+You can do this in the property list view or by code.
+Right-click on `Info.plist` and select Open As -> Source Code.
+Add the lines below somewhere inside the `<dict> </dict>`
+
+```groovy
+<!-- permission strings to be include in info.plist -->
+<key>NSCameraUsageDescription</key>
+<string>Please give us access to your camera, to complete the verification.</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Please give us access to your photo library to verify you.</string>
 ```
 
 &nbsp;
@@ -205,5 +190,38 @@ It's useful to know if a user has completed the verification flow or canceled it
 | DOCUMENT_IMAGES_UPLOAD_FAILED | Could not upload ID card or passport images. Internal request failed.                    |
 | COMPARE_IMAGES_FAILED         | Could not compare images. Internal request failed.                                       |
 | UNKNOWN_INTERNAL_ERROR        | Session failed because of an unhandled internal error.                                   |
+
+&nbsp;
+
+## UI Customizations
+
+### Appearance
+
+You can customize logo and icons.
+Provide resources.
+
+```Swift
+Kvalifika.initializeSDK(
+        AppLogoImageName: "AppLogo",
+        DocLogoImageName: "DocLogo",
+        CancelImageName: "cancel"
+    )
+```
+
+&nbsp;
+
+### Language
+
+You can set locale when initializing SDK
+Supported locales are:
+
+| Code | Language |
+| ---- | -------- |
+| EN   | English  |
+| GE   | Georgian |
+
+```swift
+sdk = Kvalifika.initializeSDK(LanguageLocale:  Kvalifika.LanguageLocaleTypeEnum.GE.rawValue)
+```
 
 &nbsp;
