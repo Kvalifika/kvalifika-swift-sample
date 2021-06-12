@@ -1,21 +1,21 @@
 PODS:
-  - Kvalifika (0.0.1)
+  - FaceTecSDK (9.0.4)
+  - Kvalifika (0.0.5):
+    - FaceTecSDK (= 9.0.4)
 
 DEPENDENCIES:
-  - Kvalifika (from `https://github.com/Kvalifika/kvalifika-swift-sdk.git`)
+  - Kvalifika
 
-EXTERNAL SOURCES:
-  Kvalifika:
-    :git: https://github.com/Kvalifika/kvalifika-swift-sdk.git
-
-CHECKOUT OPTIONS:
-  Kvalifika:
-    :commit: 269a3bf2a60de192089183dc41b74ed849849424
-    :git: https://github.com/Kvalifika/kvalifika-swift-sdk.git
+SPEC REPOS:
+  https://github.com/Kvalifika/kvalifika-cocoapods-specs.git:
+    - Kvalifika
+  https://github.com/Kvalifika/zoom-cocoapods-specs.git:
+    - FaceTecSDK
 
 SPEC CHECKSUMS:
-  Kvalifika: 465c8f8eb747c090d66fa4bcbf2d3d8129eb58c8
+  FaceTecSDK: af47e4fa033e2c2bc8b18d977ed7a2f961763095
+  Kvalifika: 00c60b7dba531ac3d1c5824dfc9f8c5b2f74e7e1
 
-PODFILE CHECKSUM: 4e80fef991a2e62d13ba5cf0b3b1d04075791ae5
+PODFILE CHECKSUM: add96f5363a9faa1b71ef632f4d49aee6d6db1a9
 
 COCOAPODS: 1.10.1

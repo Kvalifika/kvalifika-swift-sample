@@ -9,23 +9,23 @@ import UIKit
 import Kvalifika
 
 class ViewController: UIViewController {
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Initialize SDK
-        Kvalifika.initializeSDK(
-                AppID: "26d3f2ee-4f37-4376-8357-c4114b9d2c63", 
-                AppLogoImageName: "AppLogo", 
-                DocLogoImageName: "DocLogo", 
-                CancelImageName: "cancel", 
-                LanguageLocale:  Kvalifika.LanguageLocaleTypeEnum.GE.rawValue, 
-                onInitialize: onInitialize, 
-                onStart: onStart, 
-                onFinish: onFinish, 
-                onError: onError
-            )
+        KvalifikaSDK.initialize(
+            AppID: "26d3f2ee-4f37-4376-8357-c4114b9d2c63",
+            AppLogoImageName: "AppLogo",
+            DocLogoImageName: "DocLogo",
+            CancelImageName: "cancel",
+            LanguageLocale:  KvalifikaSDKLocale.GE.rawValue,
+            onInitialize: onInitialize,
+            onStart: onStart,
+            onFinish: onFinish,
+            onError: onError
+        )
         
     }
     
@@ -42,12 +42,12 @@ class ViewController: UIViewController {
         print(sessionId, "onFinish")
     }
     
-    func onError(error: Kvalifika.KvalifikaSDKErrorEnum) {
+    func onError(error: KvalifikaSDKError) {
         print(error)
     }
     
     @IBAction func onStartButtonAction(_ sender: Any) {
-        let _ = Kvalifika.startPhotoIDScan(onViewController: self)
+        let _ = KvalifikaSDK.startSession(onViewController: self)
     }
     
 }
