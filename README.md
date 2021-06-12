@@ -21,7 +21,18 @@ Table of content:
 Add following to project's main `Podfile` file
 
 ```groovy
-pod 'Kvalifika', :git => "https://github.com/Kvalifika/kvalifika-swift-sdk.git"
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/Kvalifika/kvalifika-cocoapods-specs.git'
+source 'https://github.com/Kvalifika/zoom-cocoapods-specs.git'
+
+platform :ios, '13.0'
+
+# Your Target
+target 'kvalifika-swift-sample' do
+  use_frameworks!
+
+  pod 'Kvalifika'
+end
 ```
 
 &nbsp;
@@ -40,12 +51,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Initialize SDK
-        Kvalifika.initializeSDK(
+        KvalifikaSDK.initialize(
             AppID: "26d3f2ee-4f37-4376-8357-c4114b9d2c63",
             AppLogoImageName: "AppLogo",
             DocLogoImageName: "DocLogo",
             CancelImageName: "cancel",
-            LanguageLocale:  Kvalifika.LanguageLocaleTypeEnum.GE.rawValue,
+            LanguageLocale:  KvalifikaSDKLocale.GE.rawValue,
             onInitialize: onInitialize,
             onStart: onStart,
             onFinish: onFinish,
@@ -65,7 +76,7 @@ class ViewController: UIViewController {
         print("onFinish")
     }
 
-    func onError(error: Kvalifika.KvalifikaSDKErrorEnum) {
+    func onError(error: KvalifikaSDKError) {
         print(error)
     }
 }
@@ -81,7 +92,7 @@ You can do this in the property list view or by code.
 Right-click on `Info.plist` and select Open As -> Source Code.
 Add the lines below somewhere inside the `<dict> </dict>`
 
-```groovy
+```plist
 <!-- permission strings to be include in info.plist -->
 <key>NSCameraUsageDescription</key>
 <string>Please give us access to your camera, to complete the verification.</string>
@@ -93,7 +104,7 @@ Add the lines below somewhere inside the `<dict> </dict>`
 
 ## Start Verification
 
-Call `Kvalifika.startPhotoIDScan()` on button click event
+Call `Kvalifika.startSession()` on button click event
 
 ```Swift
 class ViewController: UIViewController {
@@ -101,17 +112,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Initialize SDK
-        Kvalifika.initializeSDK(
+        KvalifikaSDK.initialize(
             AppID: "26d3f2ee-4f37-4376-8357-c4114b9d2c63",
             AppLogoImageName: "AppLogo",
             DocLogoImageName: "DocLogo",
             CancelImageName: "cancel",
-            LanguageLocale:  Kvalifika.LanguageLocaleTypeEnum.GE.rawValue,
+            LanguageLocale:  KvalifikaSDKLocale.GE.rawValue,
             onInitialize: onInitialize,
             onStart: onStart,
             onFinish: onFinish,
-            onError: onError)
-
+            onError: onError
+        )
     }
 
     func onInitialize() {
@@ -126,12 +137,12 @@ class ViewController: UIViewController {
         print("onFinish")
     }
 
-    func onError(error: Kvalifika.KvalifikaSDKErrorEnum) {
+    func onError(error: KvalifikaSDKError) {
         print(error)
     }
 
     @IBAction func onStart(_ sender: Any) {
-        let _ = Kvalifika.startPhotoIDScan(onViewController: self)
+        let _ = KvalifikaSDK.startSession(onViewController: self)
     }
 }
 ```
@@ -167,7 +178,7 @@ It's useful to know if a user has completed the verification flow or canceled it
         print("onFinish")
     }
 
-    func onError(error: Kvalifika.KvalifikaSDKErrorEnum) {
+    func onError(error: KvalifikaSDKError) {
         print(error)
     }
 ```
@@ -201,11 +212,11 @@ You can customize logo and icons.
 Provide resources.
 
 ```Swift
-Kvalifika.initializeSDK(
-        AppLogoImageName: "AppLogo",
-        DocLogoImageName: "DocLogo",
-        CancelImageName: "cancel"
-    )
+KvalifikaSDK.initialize(
+    AppLogoImageName: "AppLogo",
+    DocLogoImageName: "DocLogo",
+    CancelImageName: "cancel"
+)
 ```
 
 &nbsp;
@@ -221,7 +232,9 @@ Supported locales are:
 | GE   | Georgian |
 
 ```swift
-sdk = Kvalifika.initializeSDK(LanguageLocale:  Kvalifika.LanguageLocaleTypeEnum.GE.rawValue)
+sdk = KvalifikaSDK.initialize(
+    LanguageLocale:  KvalifikaSDKLocale.EN.rawValue
+)
 ```
 
 &nbsp;
