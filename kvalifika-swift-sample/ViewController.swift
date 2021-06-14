@@ -17,10 +17,12 @@ class ViewController: UIViewController {
         // Initialize SDK
         KvalifikaSDK.initialize(
             AppID: "26d3f2ee-4f37-4376-8357-c4114b9d2c63",
-            AppLogoImageName: "AppLogo",
-            DocLogoImageName: "DocLogo",
-            CancelImageName: "cancel",
-            LanguageLocale:  KvalifikaSDKLocale.GE.rawValue,
+            Locale: KvalifikaSDKLocale.GE.rawValue,
+            Logo: "AppLogo",
+            DocumentIcon: "DocLogo",
+            CancelIcon: "cancel",
+            ActiveFlashIcon: "",
+            InactiveFlashIcon: "",
             onInitialize: onInitialize,
             onStart: onStart,
             onFinish: onFinish,
