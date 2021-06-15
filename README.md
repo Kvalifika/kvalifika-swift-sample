@@ -20,12 +20,12 @@ Table of content:
 
 Add following to project's main `Podfile` file
 
-```groovy
+```podspec
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/Kvalifika/kvalifika-cocoapods-specs.git'
 source 'https://github.com/Kvalifika/zoom-cocoapods-specs.git'
 
-platform :ios, '13.0'
+platform :ios, '11.0'
 
 # Your Target
 target 'kvalifika-swift-sample' do
@@ -50,18 +50,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Initialize SDK
+        // Initialize SDK and provide names of images
         KvalifikaSDK.initialize(
-            AppID: "26d3f2ee-4f37-4376-8357-c4114b9d2c63",
-            AppLogoImageName: "AppLogo",
-            DocLogoImageName: "DocLogo",
-            CancelImageName: "cancel",
-            LanguageLocale:  KvalifikaSDKLocale.GE.rawValue,
+            AppID: "YOUR APP ID",
+            Locale:  KvalifikaSDKLocale.GE.rawValue,
+            Logo: "AppLogo",
+            DocumentIcon: "DocLogo",
+            CancelIcon: "cancel",
+            ActiveFlashIcon: "",
+            InactiveFlashIcon: "",
             onInitialize: onInitialize,
             onStart: onStart,
             onFinish: onFinish,
-            onError: onError)
-
+            onError: onError
+        )
     }
 
     func onInitialize() {
@@ -113,11 +115,13 @@ class ViewController: UIViewController {
 
         // Initialize SDK
         KvalifikaSDK.initialize(
-            AppID: "26d3f2ee-4f37-4376-8357-c4114b9d2c63",
-            AppLogoImageName: "AppLogo",
-            DocLogoImageName: "DocLogo",
-            CancelImageName: "cancel",
-            LanguageLocale:  KvalifikaSDKLocale.GE.rawValue,
+            AppID: "YOUR APP ID",
+            Locale:  KvalifikaSDKLocale.GE.rawValue,
+            Logo: "AppLogo",
+            DocumentIcon: "DocLogo",
+            CancelIcon: "cancel",
+            ActiveFlashIcon: "",
+            InactiveFlashIcon: "",
             onInitialize: onInitialize,
             onStart: onStart,
             onFinish: onFinish,
@@ -209,13 +213,15 @@ It's useful to know if a user has completed the verification flow or canceled it
 ### Appearance
 
 You can customize logo and icons.
-Provide resources.
+Provide resource names.
 
 ```Swift
 KvalifikaSDK.initialize(
-    AppLogoImageName: "AppLogo",
-    DocLogoImageName: "DocLogo",
-    CancelImageName: "cancel"
+    Logo: "AppLogo",
+    DocumentIcon: "DocLogo",
+    CancelIcon: "cancel",
+    ActiveFlashIcon: "",
+    InactiveFlashIcon: "",
 )
 ```
 
@@ -233,7 +239,7 @@ Supported locales are:
 
 ```swift
 sdk = KvalifikaSDK.initialize(
-    LanguageLocale:  KvalifikaSDKLocale.EN.rawValue
+    Locale: KvalifikaSDKLocale.EN.rawValue
 )
 ```
 
