@@ -35,6 +35,11 @@ target 'kvalifika-swift-sample' do
 end
 ```
 
+If you want to update pod run in terminal
+```bash
+pod update Kvalifika
+```
+
 &nbsp;
 
 ## Initialize the SDK
