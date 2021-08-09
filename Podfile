@@ -1,4 +1,4 @@
-source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/Kvalifika/kvalifika-cocoapods-specs.git'
 source 'https://github.com/Kvalifika/zoom-cocoapods-specs.git'
 

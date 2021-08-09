@@ -73,6 +73,9 @@ class ViewController: UIViewController {
 
     func onInitialize() {
         print("onInitialize")
+	
+	// Start session right after initialization
+	let _ = KvalifikaSDK.startSession(onViewController: self)
     }
 
     func onStart(sessionId: String) {
@@ -208,7 +211,6 @@ It's useful to know if a user has completed the verification flow or canceled it
 | REVERSE_PORTRAIT_NOT_ALLOWED  | Verification cancelled because device is in reverse portrait mode.                       |
 | FACE_IMAGES_UPLOAD_FAILED     | Could not upload face images. Internal request failed.                                   |
 | DOCUMENT_IMAGES_UPLOAD_FAILED | Could not upload ID card or passport images. Internal request failed.                    |
-| COMPARE_IMAGES_FAILED         | Could not compare images. Internal request failed.                                       |
 | UNKNOWN_INTERNAL_ERROR        | Session failed because of an unhandled internal error.                                   |
 
 &nbsp;

@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         
         // Initialize SDK
         KvalifikaSDK.initialize(
-            AppID: "26d3f2ee-4f37-4376-8357-c4114b9d2c63",
+            AppID: "YOUR APP ID",
             Locale: KvalifikaSDKLocale.GE.rawValue,
             Logo: "AppLogo",
             DocumentIcon: "DocLogo",
@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     
     func onInitialize() {
         print("onInitialize")
+        KvalifikaSDK.startSession(onViewController: self)
     }
     
     func onStart(sessionId: String) {
