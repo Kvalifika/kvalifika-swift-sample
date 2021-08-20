@@ -14,6 +14,7 @@ Table of content:
 - [UI Customizations](#ui-customizations)
   - [Appearance](#appearance)
   - [Language](#language)
+- [Development Mode](#development-mode)
     &nbsp;
 
 ## Installation
@@ -251,3 +252,15 @@ sdk = KvalifikaSDK.initialize(
 ```
 
 &nbsp;
+
+### Development Mode
+Without specifying mode SDK uses [https://api.kvalifika.com](https://api.kvalifika.com)
+
+With development mode ON SDK uses [https://apistaging.kvalifika.com](https://apistaging.kvalifika.com)
+
+```swift
+KvalifikaSDK.initialize(
+   AppID: "YOUR APP ID"
+   Development: true
+)
+```
