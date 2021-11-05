@@ -1,6 +1,6 @@
 # Kvalifika SDK Swift Sample
 
-Use Kvalifika SDK to easily integrate into your Android app
+Use Kvalifika SDK to easily integrate into your iOS app
 
 Table of content:
 
