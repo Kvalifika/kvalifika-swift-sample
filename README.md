@@ -205,13 +205,10 @@ It's useful to know if a user has completed the verification flow or canceled it
 | INVALID_APP_ID                | Kvalifika App Id is incorrect                                                            |
 | USER_CANCELLED                | User cancelled before completing verification.                                           |
 | TIMEOUT                       | Cancelled due to inactivity.                                                             |
-| SESSION_UNSUCCESSFUL          | The Session was not performed successfully                                               |
-| ID_UNSUCCESSFUL               | The ID Scan was not performed successfully and identity document data was not generated. |
 | CAMERA_PERMISSION_DENIED      | Camera is required but access prevented by user settings.                                |
 | LANDSCAPE_MODE_NOT_ALLOWED    | Verification cancelled because device is in landscape mode.                              |
 | REVERSE_PORTRAIT_NOT_ALLOWED  | Verification cancelled because device is in reverse portrait mode.                       |
 | FACE_IMAGES_UPLOAD_FAILED     | Could not upload face images. Internal request failed.                                   |
-| DOCUMENT_IMAGES_UPLOAD_FAILED | Could not upload ID card or passport images. Internal request failed.                    |
 | NO_MORE_ATTEMPTS | User has reached maximum limit of attempts                    |
 | UNKNOWN_INTERNAL_ERROR        | Session failed because of an unhandled internal error.                                   |
 

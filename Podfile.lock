@@ -1,7 +1,7 @@
 PODS:
-  - FaceTecSDK (9.0.5)
-  - Kvalifika (0.4.2):
-    - FaceTecSDK (= 9.0.5)
+  - FaceTecSDK (9.3.4)
+  - Kvalifika (1.0.0):
+    - FaceTecSDK (= 9.3.4)
 
 DEPENDENCIES:
   - Kvalifika
@@ -13,9 +13,9 @@ SPEC REPOS:
     - FaceTecSDK
 
 SPEC CHECKSUMS:
-  FaceTecSDK: 1e5fdb0d062376be2be1691bb9ee198380c5ba39
-  Kvalifika: bc7a1ba5570fbf6471f4cdb854676f4505cfac4e
+  FaceTecSDK: 25406899f8471203ac47a2457aab31d1adec02a9
+  Kvalifika: d93590671c4a21bbb9f1066caa36bfd457259def
 
 PODFILE CHECKSUM: 65bd50bffa354a9706f4a3e83bc3cfe56ee71928
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
