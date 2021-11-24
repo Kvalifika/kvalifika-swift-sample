@@ -1,12 +1,18 @@
 PODS:
   - FaceTecSDK (9.3.4)
-  - Kvalifika (1.0.0):
+  - Kvalifika (1.0.1):
     - FaceTecSDK (= 9.3.4)
+    - Sentry (= 7.5.2)
+  - Sentry (7.5.2):
+    - Sentry/Core (= 7.5.2)
+  - Sentry/Core (7.5.2)
 
 DEPENDENCIES:
   - Kvalifika
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Sentry
   https://github.com/Kvalifika/kvalifika-cocoapods-specs.git:
     - Kvalifika
   https://github.com/Kvalifika/zoom-cocoapods-specs.git:
@@ -14,8 +20,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   FaceTecSDK: 25406899f8471203ac47a2457aab31d1adec02a9
-  Kvalifika: d93590671c4a21bbb9f1066caa36bfd457259def
+  Kvalifika: e712b6f09df0f5b4f1750038283a22843e7b24cf
+  Sentry: 95788d2baa9cc904151c9ac41101c67d9f25e09e
 
-PODFILE CHECKSUM: 65bd50bffa354a9706f4a3e83bc3cfe56ee71928
+PODFILE CHECKSUM: db07d4dc8412fd5c4912f052d8fcdad7b2433026
 
 COCOAPODS: 1.11.2
