@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         
         // Initialize SDK
         KvalifikaSDK.initialize(
-            AppID: "74b81cfd-1cbe-49a3-80f3-8d6780d52c77",
+            AppID: "YOUR APP ID",
             Locale: KvalifikaSDKLocale.GE.rawValue,
             Logo: "AppLogo",
             DocumentIcon: "DocLogo",
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
             onStart: onStart,
             onFinish: onFinish,
             onError: onError,
-            Development: false
+            Development: true
         )
     }
 
