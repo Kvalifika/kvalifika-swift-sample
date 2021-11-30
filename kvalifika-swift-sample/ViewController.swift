@@ -10,13 +10,12 @@ import Kvalifika
 
 class ViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Initialize SDK
         KvalifikaSDK.initialize(
-            AppID: "YOUR APP ID",
+            AppID: "74b81cfd-1cbe-49a3-80f3-8d6780d52c77",
             Locale: KvalifikaSDKLocale.GE.rawValue,
             Logo: "AppLogo",
             DocumentIcon: "DocLogo",
@@ -26,12 +25,11 @@ class ViewController: UIViewController {
             onInitialize: onInitialize,
             onStart: onStart,
             onFinish: onFinish,
-            onError: onError
+            onError: onError,
+            Development: false
         )
-        
     }
-    
-    
+
     func onInitialize() {
         print("onInitialize")
         KvalifikaSDK.startSession(onViewController: self)
@@ -52,6 +50,4 @@ class ViewController: UIViewController {
     @IBAction func onStartButtonAction(_ sender: Any) {
         let _ = KvalifikaSDK.startSession(onViewController: self)
     }
-    
 }
-
