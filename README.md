@@ -15,6 +15,7 @@ Table of content:
   - [Appearance](#appearance)
   - [Language](#language)
 - [Development Mode](#development-mode)
+- [Note](#note)
     &nbsp;
 
 ## Installation
@@ -264,3 +265,6 @@ KvalifikaSDK.initialize(
    Development: true
 )
 ```
+
+### Note
+Application works on ios version 11.0 and higher
