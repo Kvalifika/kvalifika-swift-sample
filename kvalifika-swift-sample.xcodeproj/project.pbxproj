@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		163462A7265BF8060084622F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163462A6265BF8060084622F /* AppDelegate.swift */; };
-		163462A9265BF8060084622F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163462A8265BF8060084622F /* SceneDelegate.swift */; };
 		163462AB265BF8060084622F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163462AA265BF8060084622F /* ViewController.swift */; };
 		163462AE265BF8060084622F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163462AC265BF8060084622F /* Main.storyboard */; };
 		163462B0265BF8080084622F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 163462AF265BF8080084622F /* Assets.xcassets */; };
@@ -19,7 +18,6 @@
 /* Begin PBXFileReference section */
 		163462A3265BF8060084622F /* kvalifika-swift-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kvalifika-swift-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		163462A6265BF8060084622F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		163462A8265BF8060084622F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		163462AA265BF8060084622F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		163462AD265BF8060084622F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		163462AF265BF8080084622F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				163462A6265BF8060084622F /* AppDelegate.swift */,
-				163462A8265BF8060084622F /* SceneDelegate.swift */,
 				163462AA265BF8060084622F /* ViewController.swift */,
 				163462AC265BF8060084622F /* Main.storyboard */,
 				163462AF265BF8080084622F /* Assets.xcassets */,
@@ -225,7 +222,6 @@
 			files = (
 				163462AB265BF8060084622F /* ViewController.swift in Sources */,
 				163462A7265BF8060084622F /* AppDelegate.swift in Sources */,
-				163462A9265BF8060084622F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +298,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -357,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -373,8 +369,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEVELOPMENT_TEAM = TTA7TN336Q;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -382,14 +378,14 @@
 					"$(PROJECT_DIR)/kvalifika-swift-sample",
 				);
 				INFOPLIST_FILE = "kvalifika-swift-sample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kvalifika.sdk.kvalifika-swift-sample";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kvalifika.sdk.KvalifikaExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Kvalifika Dist";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -401,8 +397,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEVELOPMENT_TEAM = TTA7TN336Q;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -410,14 +406,14 @@
 					"$(PROJECT_DIR)/kvalifika-swift-sample",
 				);
 				INFOPLIST_FILE = "kvalifika-swift-sample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kvalifika.sdk.kvalifika-swift-sample";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kvalifika.sdk.KvalifikaExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Kvalifika Dist";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
