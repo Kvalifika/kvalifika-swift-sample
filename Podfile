@@ -11,6 +11,6 @@ target 'kvalifika-swift-sample' do
   use_frameworks!
 
   # Pods for kvalifika-swift-sample
-  pod 'Kvalifika', '~> 1.0.5'
+  pod 'Kvalifika', '1.0.20'
 
 end
